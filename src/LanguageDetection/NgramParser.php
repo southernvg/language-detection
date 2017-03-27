@@ -134,7 +134,9 @@ abstract class NgramParser
             }
         }
 
-        $tokens = array_merge(...$tokens);
+        if ( $tokens ) {
+            $tokens = array_merge(...$tokens);
+        }
         unset($tokens['_']);
 
         arsort($tokens, SORT_NUMERIC);
